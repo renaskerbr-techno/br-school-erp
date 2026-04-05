@@ -1,4 +1,89 @@
 /* src/index.css */
+/* Tailwind Base */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Smooth global font */
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* 🔥 Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+/* 🔥 Smooth Dropdown Scale Animation (NEW) */
+@keyframes dropdown {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-dropdown {
+  animation: dropdown 0.2s ease-out;
+}
+
+/* 🔥 Scrollbar Styling (optional premium UI) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Glow Text */
+.glow-text {
+  text-shadow: 0 0 10px #fff, 0 0 20px #3b82f6;
+}
+
+/* Dropdown Animation */
+@keyframes dropdown {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-dropdown {
+  animation: dropdown 0.2s ease-out;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e3a8a;
+  border-radius: 10px;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}

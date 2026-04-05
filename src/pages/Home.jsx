@@ -7,15 +7,30 @@ export default function Home() {
   return (
     <div>
       {/* HERO SECTION */}
-      <div
-        className="h-[80vh] bg-cover bg-center flex items-center justify-center text-white"
-        style={{ backgroundImage: `url(${school})` }}
-      >
-        <div className="text-center bg-black/40 p-6 rounded">
-          <h1 className="text-5xl font-bold">BR SCHOOL</h1>
-          <p className="text-xl mt-2">Building Future Leaders.</p>
-        </div>
-      </div>
+<div className="relative h-[calc(100vh-64px)]">
+  <img
+    src={school}
+    className="w-full h-full object-cover object-top"
+  />
+
+  {/* DARK OVERLAY */}
+  <div className="absolute inset-0 bg-black/50"></div>
+
+  {/* TEXT */}
+  <div className="absolute inset-0 flex items-center justify-center">
+    <div className="text-center px-8 py-6 rounded-xl backdrop-blur-md">
+      
+      <h1 className="text-5xl md:text-6xl font-bold text-white">
+        BR SCHOOL
+      </h1>
+
+      <p className="text-xl mt-3 text-yellow-300">
+        Building Future Leaders
+      </p>
+
+    </div>
+  </div>
+</div>
 
       {/* ABOUT SECTION */}
       <div className="p-8 grid md:grid-cols-2 gap-6 items-center">
