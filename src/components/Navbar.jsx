@@ -138,9 +138,10 @@ export default function Navbar() {
           setDropdown={setDropdown}
           highlight
         >
-          <MegaLink to="/login/student" text="Student" />
           <MegaLink to="/login/parent" text="Parent" />
-          <MegaLink to="/login/teacher" text="Teacher" />
+	  <MegaLink to="/login/student" text="Student" />
+          <MegaLink to="/login/parent" text="Teacher" />
+          <MegaLink to="/login/teacher" text="Admin" />
         </Dropdown>
 
       </div>
@@ -217,9 +218,10 @@ export default function Navbar() {
             <MobileLink to="/contact" text="Contact" close={setMenuOpen} />
 
             <MobileAccordion title="Login">
+	      <MobileLink to="/login/parent" text="Parent" close={setMenuOpen} />
               <MobileLink to="/login/student" text="Student" close={setMenuOpen} />
-              <MobileLink to="/login/parent" text="Parent" close={setMenuOpen} />
-              <MobileLink to="/login/teacher" text="Teacher" close={setMenuOpen} />
+              <MobileLink to="/login/parent" text="Teacher" close={setMenuOpen} />
+              <MobileLink to="/login/teacher" text="Admin" close={setMenuOpen} />
             </MobileAccordion>
 
           </div>
