@@ -17,7 +17,7 @@ export default function Contact() {
             📍 Address: BR School, Hyderabad, India
           </p>
           <p className="text-gray-600 mb-2">
-            📞 Phone: +91 9876543210
+            📞 Phone: +91 9951598664
           </p>
           <p className="text-gray-600 mb-4">
             📧 Email: brschool@email.com

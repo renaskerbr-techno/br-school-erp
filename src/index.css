@@ -22,3 +22,117 @@ body {
   background: #1e3a8a;
   border-radius: 10px;
 }
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 40s linear infinite;
+  padding-left: 100%;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker {
+  animation: ticker-scroll 40s linear infinite;
+}
+
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker:hover {
+  animation-play-state: paused;
+}
+
+/* Main Announcement Bar Styling */
+.announcement-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #F59E0B; /* Yellow color */
+  color: #000;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  z-index: 50;
+}
+
+/* "What's New" Button-Style */
+.announcement-label {
+  background-color: #EF4444; /* Red color */
+  color: white;
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-left: 16px;
+}
+
+/* Ticker Scrolling Container */
+.ticker-container {
+  flex: 1;
+  overflow: hidden;
+  background-color: #2563EB; /* Blue color */
+  color: white;
+  position: relative;
+}
+
+/* Scrolling Animation */
+.ticker-track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 40s linear infinite; /* Reduced time for faster scrolling */
+}
+
+/* Scroll Left Animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Hover pause on scrolling */
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+/* Pause on small screens (below 768px) */
+@media (max-width: 768px) {
+  .ticker-track:hover {
+    animation-play-state: running;
+  }
+}

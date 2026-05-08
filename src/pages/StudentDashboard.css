@@ -1,0 +1,90 @@
+/* DASHBOARD PAGE */
+.dashboard {
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  background: #f4f7fb;
+  min-height: 100vh;
+}
+
+/* WELCOME */
+.welcome {
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.tabs button {
+  padding: 10px 15px;
+  border: none;
+  background: #2b6cb0;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tabs button:hover {
+  background: #1a4f8b;
+}
+
+/* TAB CONTENT */
+.tab-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* GRAPH */
+.graph {
+  height: 150px;
+  background: #eef2f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+/* NOTICES */
+.notices {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+}

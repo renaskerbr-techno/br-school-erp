@@ -1,0 +1,127 @@
+/* MAIN WRAPPER */
+.portal-wrapper {
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  min-height: 100vh;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+/* HERO SECTION */
+.portal-hero h1 {
+  font-size: 38px;
+  font-weight: 800;
+  color: #1e3a8a;
+}
+
+.portal-hero p {
+  color: #6b7280;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.underline {
+  width: 70px;
+  height: 4px;
+  background: #ef4444;
+  margin: 15px auto 50px;
+  border-radius: 2px;
+}
+
+/* GRID LAYOUT */
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* CARD STYLES */
+.portal-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* HOVER EFFECTS */
+.portal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* ICON */
+.icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+/* TEXT STYLES */
+.portal-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.portal-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* BUTTON STYLES */
+.login-btn {
+  display: block;
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* BUTTON HOVER */
+.login-btn:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* COLOR THEMES */
+.portal-card.green { border-top: 5px solid #22c55e; }
+.portal-card.green .icon { color: #22c55e; }
+.portal-card.green .login-btn { background: #22c55e; }
+
+.portal-card.blue { border-top: 5px solid #2563eb; }
+.portal-card.blue .icon { color: #2563eb; }
+.portal-card.blue .login-btn { background: #2563eb; }
+
+.portal-card.red { border-top: 5px solid #ef4444; }
+.portal-card.red .icon { color: #ef4444; }
+.portal-card.red .login-btn { background: #ef4444; }
+
+.portal-card.yellow { border-top: 5px solid #f59e0b; }
+.portal-card.yellow .icon { color: #f59e0b; }
+.portal-card.yellow .login-btn { background: #f59e0b; }
+
+.portal-card.dark { border-top: 5px solid #1f2937; }
+.portal-card.dark .icon { color: #1f2937; }
+.portal-card.dark .login-btn { background: #1f2937; }
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1100px) {
+  .portal-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .portal-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
