@@ -276,7 +276,7 @@ export default function Curriculum() {
                 </h2>
 
                 <p className="mt-2 text-slate-300">
-                  Classes IX & X
+                  Classes I & X
                 </p>
 
               </div>
