@@ -14,9 +14,11 @@ import {
 import PageHeader from "../../components/PageHeader";
 
 const curriculumSections = [
+
   {
     title: "Pre Primary (Preparatory I & II)",
     icon: <FaBookOpen />,
+
     subjects: [
       "English",
       "Number Work",
@@ -24,51 +26,122 @@ const curriculumSections = [
       "Drawing Activities",
       "Rhymes",
     ],
-    activities: [
+
+    coCurricular: [
       "Memory Game",
       "Word Game",
+      "Recitation",
+      "Declamation",
+    ],
+
+    extraCurricular: [
       "Clay Modelling",
+      "Pasting Pictures",
       "Free Hand Drawing",
+      "Colour Day",
+      "Sports Competitions",
     ],
   },
 
   {
-    title: "Primary Section (Classes I - V)",
+    title: "Primary Section (Classes I & II)",
     icon: <FaGraduationCap />,
+
     subjects: [
       "English",
+      "2nd Language",
       "Mathematics",
       "Environmental Science",
       "General Knowledge",
+      "Moral Science",
       "Computer Education",
+      "SUPW & Drawing",
+    ],
+
+    coCurricular: [
+      "Declamation",
+      "Story Narration",
+      "Memory Test",
+      "Puzzles",
+      "English Lab Activities",
+    ],
+
+    extraCurricular: [
+      "Mass Drill",
+      "Chess",
+      "Sports Competitions",
+    ],
+  },
+
+  {
+    title: "Primary Section (Classes III - V)",
+    icon: <FaBookOpen />,
+
+    subjects: [
+      "English Language",
+      "English Literature",
+      "Hindi / Telugu",
+      "Mathematics",
+      "Social Studies",
+      "General Science",
+      "Computer Science",
       "Moral Science",
     ],
-    activities: [
+
+    coCurricular: [
+      "PowerPoint Presentations",
       "Story Narration",
       "Recitation",
-      "Chess",
-      "Basketball",
+      "Memory Test",
       "English Lab Activities",
+    ],
+
+    extraCurricular: [
+      "Basketball",
+      "Chess",
+      "Running Race",
+      "Long Jump",
+      "Sports Competitions",
     ],
   },
 
   {
     title: "Upper Primary (Classes VI - VIII)",
     icon: <FaFlask />,
+
     subjects: [
+      "English Language",
       "English Literature",
+      "Mathematics",
       "Physics",
       "Chemistry",
       "Biology",
       "History & Civics",
       "Geography",
       "Computer Science",
+      "Moral Science",
     ],
-    activities: [
+
+    electives: [
+      "Commercial Applications",
+      "Computer Applications",
+      "Fashion Designing",
+    ],
+
+    coCurricular: [
       "PowerPoint Presentations",
-      "Debates",
+      "Declamation",
+      "Story Narration",
+      "Recitation",
+      "Puzzles",
+      "English Lab Activities",
+    ],
+
+    extraCurricular: [
       "Basketball",
       "Badminton",
+      "Chess",
+      "Running Race",
       "Shotput",
     ],
   },
@@ -76,19 +149,38 @@ const curriculumSections = [
   {
     title: "ICSE (Classes IX & X)",
     icon: <FaLaptopCode />,
+
     subjects: [
+      "English Language",
+      "English Literature",
       "Mathematics",
       "Physics",
       "Chemistry",
       "Biology",
+      "History & Civics",
+      "Geography",
+      "Computer Science",
+    ],
+
+    electives: [
       "Computer Applications",
       "Commercial Applications",
       "Fashion Designing",
     ],
-    activities: [
+
+    coCurricular: [
+      "Debate",
+      "Declamation",
       "Role Play",
+      "Mathematics Assignments",
       "Project Work",
-      "Assignments",
+      "English Lab Activities",
+    ],
+
+    extraCurricular: [
+      "Basketball",
+      "Badminton",
+      "Chess",
       "Cricket",
       "Athletics",
     ],
@@ -97,6 +189,7 @@ const curriculumSections = [
   {
     title: "ISC (Classes XI & XII)",
     icon: <FaChalkboardTeacher />,
+
     subjects: [
       "MPC",
       "BiPC",
@@ -106,14 +199,31 @@ const curriculumSections = [
       "Computer Science",
       "Fashion Designing",
     ],
-    activities: [
-      "Debates",
-      "Research Projects",
-      "Leadership Activities",
+
+    electives: [
+      "Computer Applications",
+      "Business Studies",
+      "Accounts",
+      "Fashion Designing",
+    ],
+
+    coCurricular: [
+      "Debate",
+      "Declamation",
+      "Role Play",
+      "Assignments",
+      "Project Work",
+    ],
+
+    extraCurricular: [
       "Basketball",
+      "Badminton",
+      "Chess",
       "Cricket",
+      "Athletics",
     ],
   },
+
 ];
 
 export default function Curriculum() {
@@ -140,18 +250,19 @@ export default function Curriculum() {
             <div>
 
               <p className="uppercase tracking-[4px] text-sm text-slate-300 mb-3">
-                BR School ERP
+                BR SCHOOL ERP
               </p>
 
               <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
-                Modern Academic Curriculum
+                Academic Curriculum
               </h1>
 
               <p className="text-slate-300 leading-7 text-lg">
                 Affiliated to the Council for the Indian School
                 Certificate Examinations, New Delhi since 1980.
-                Our curriculum combines academic excellence,
-                co-curricular development, and practical learning.
+                Our curriculum balances academic excellence,
+                practical learning, leadership development,
+                and co-curricular growth.
               </p>
 
             </div>
@@ -159,6 +270,7 @@ export default function Curriculum() {
             <div className="grid grid-cols-2 gap-4">
 
               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6">
+
                 <h2 className="text-3xl font-bold">
                   ICSE
                 </h2>
@@ -166,9 +278,11 @@ export default function Curriculum() {
                 <p className="mt-2 text-slate-300">
                   Classes IX & X
                 </p>
+
               </div>
 
               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6">
+
                 <h2 className="text-3xl font-bold">
                   ISC
                 </h2>
@@ -176,26 +290,31 @@ export default function Curriculum() {
                 <p className="mt-2 text-slate-300">
                   Classes XI & XII
                 </p>
+
               </div>
 
               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6">
+
                 <h2 className="text-3xl font-bold">
                   40+
                 </h2>
 
                 <p className="mt-2 text-slate-300">
-                  Subjects & Activities
+                  Subjects Offered
                 </p>
+
               </div>
 
               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6">
+
                 <h2 className="text-3xl font-bold">
                   30+
                 </h2>
 
                 <p className="mt-2 text-slate-300">
-                  Experienced Faculty
+                  Expert Faculty
                 </p>
+
               </div>
 
             </div>
@@ -223,6 +342,8 @@ export default function Curriculum() {
               viewport={{ once: true }}
             >
 
+              {/* HEADER */}
+
               <div className="bg-gradient-to-r from-blue-700 to-indigo-800 text-white p-6 flex items-center gap-4">
 
                 <div className="text-3xl">
@@ -230,16 +351,22 @@ export default function Curriculum() {
                 </div>
 
                 <div>
+
                   <h2 className="text-2xl font-bold">
                     {section.title}
                   </h2>
+
                 </div>
 
               </div>
 
-              <div className="p-6">
+              {/* BODY */}
 
-                <div className="mb-6">
+              <div className="p-6 space-y-6">
+
+                {/* SUBJECTS */}
+
+                <div>
 
                   <h3 className="text-lg font-bold text-slate-800 mb-4">
                     Subjects Offered
@@ -262,21 +389,77 @@ export default function Curriculum() {
 
                 </div>
 
+                {/* ELECTIVES */}
+
+                {section.electives && (
+
+                  <div>
+
+                    <h3 className="text-lg font-bold text-slate-800 mb-4">
+                      Elective Subjects
+                    </h3>
+
+                    <div className="flex flex-wrap gap-3">
+
+                      {section.electives.map((item, i) => (
+
+                        <span
+                          key={i}
+                          className="bg-purple-50 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold"
+                        >
+                          {item}
+                        </span>
+
+                      ))}
+
+                    </div>
+
+                  </div>
+
+                )}
+
+                {/* CO CURRICULAR */}
+
                 <div>
 
                   <h3 className="text-lg font-bold text-slate-800 mb-4">
                     Co-Curricular Activities
                   </h3>
 
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid md:grid-cols-2 gap-3">
 
-                    {section.activities.map((activity, i) => (
+                    {section.coCurricular.map((item, i) => (
 
                       <div
                         key={i}
                         className="bg-slate-100 rounded-xl px-4 py-3 text-sm font-medium text-slate-700"
                       >
-                        {activity}
+                        {item}
+                      </div>
+
+                    ))}
+
+                  </div>
+
+                </div>
+
+                {/* EXTRA CURRICULAR */}
+
+                <div>
+
+                  <h3 className="text-lg font-bold text-slate-800 mb-4">
+                    Extra-Curricular Activities
+                  </h3>
+
+                  <div className="grid md:grid-cols-2 gap-3">
+
+                    {section.extraCurricular.map((item, i) => (
+
+                      <div
+                        key={i}
+                        className="bg-emerald-50 border border-emerald-100 rounded-xl px-4 py-3 text-sm font-medium text-emerald-700"
+                      >
+                        {item}
                       </div>
 
                     ))}
@@ -297,7 +480,7 @@ export default function Curriculum() {
 
       {/* EXAMS + ACADEMIC CELL */}
 
-      <section className="max-w-7xl mx-auto px-4 pb-14">
+      <section className="max-w-7xl mx-auto px-4 pb-10">
 
         <div className="grid md:grid-cols-2 gap-6">
 
@@ -319,10 +502,10 @@ export default function Curriculum() {
             </div>
 
             <p className="text-slate-600 leading-7">
-              Three Unit Tests and Three Terminal Examinations
-              are conducted every academic year. Promotion is
-              based on student performance, continuous assessment,
-              and academic progress evaluation.
+              Three Unit Tests and Three Terminal
+              Examinations are conducted every academic
+              year. Promotion is based on student
+              performance and continuous evaluation.
             </p>
 
           </motion.div>
@@ -345,10 +528,10 @@ export default function Curriculum() {
             </div>
 
             <p className="text-slate-600 leading-7">
-              Our Academic Inspection Cell continuously monitors
-              and evaluates teaching standards, curriculum delivery,
-              and student learning outcomes to ensure consistent
-              academic excellence.
+              The Academic Inspection Cell continuously
+              monitors and evaluates academic quality,
+              teaching methodology, and curriculum delivery
+              standards across all sections.
             </p>
 
           </motion.div>
@@ -373,18 +556,18 @@ export default function Curriculum() {
             <FaBasketballBall className="text-4xl text-yellow-400" />
 
             <h2 className="text-3xl font-bold">
-              Experienced Faculty & Activities
+              Faculty & Student Development
             </h2>
 
           </div>
 
           <p className="text-slate-300 leading-8 text-lg">
-            Our institution is supported by highly experienced
-            teaching professionals with over 30 years of
-            academic expertise. Alongside academics, students
-            actively participate in sports, leadership programs,
-            presentations, project work, debates, athletics,
-            and creative activities for holistic development.
+            The school is equipped with highly experienced
+            faculty members who guide students in academics,
+            sports, leadership, communication, and overall
+            personality development. Students actively
+            participate in athletics, debates, presentations,
+            sports competitions, and project-based learning.
           </p>
 
         </motion.div>
